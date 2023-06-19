@@ -6,12 +6,20 @@
 918 -> 98
 */
 
-Random rand = new Random();
-int number = rand.Next(100,1000);
-int firstNum = number /100 ;
-int secondNum = number / 10;
-int thirdNum = number % 10 ;
+int  getNumber(int num)
+{
+   
+    Console.Write(num + " => "); 
+    int firstNum = num / 100 ;
+    int secondNum = num % 10;
+    int thirdNum = firstNum*10+secondNum ;
 
-int result = (firstNum  * 10 + thirdNum);
-Console.WriteLine(number);
-Console.WriteLine(result);
+    
+    return thirdNum;
+
+}
+int num = new Random().Next(100, 1000);
+int finalresult = getNumber(num);
+Console.WriteLine(finalresult);
+
+
